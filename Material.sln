@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Testes", "5 - Testes", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Material.IoC", "Material.IoC\Material.IoC.csproj", "{47CAA0E5-0501-4CB8-B9CD-990A422C6BE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Material.Dominio.Testes", "Material.Dominio.Testes\Material.Dominio.Testes.csproj", "{990496BD-E5C2-4FCF-85D5-CE5BC697BC00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{47CAA0E5-0501-4CB8-B9CD-990A422C6BE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47CAA0E5-0501-4CB8-B9CD-990A422C6BE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47CAA0E5-0501-4CB8-B9CD-990A422C6BE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{990496BD-E5C2-4FCF-85D5-CE5BC697BC00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{990496BD-E5C2-4FCF-85D5-CE5BC697BC00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{990496BD-E5C2-4FCF-85D5-CE5BC697BC00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{990496BD-E5C2-4FCF-85D5-CE5BC697BC00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,5 +65,6 @@ Global
 		{A4B31F29-DC55-406C-9BD1-5A9F5DCD448D} = {DC2C0131-B3DF-44F6-BB44-121A17BD3964}
 		{67701910-B432-4097-8BE6-387D18B293FD} = {853388EF-89F3-49DE-B5E8-401441D36215}
 		{47CAA0E5-0501-4CB8-B9CD-990A422C6BE0} = {853388EF-89F3-49DE-B5E8-401441D36215}
+		{990496BD-E5C2-4FCF-85D5-CE5BC697BC00} = {F5DAE48A-C534-4C33-A3DD-C086226FA89E}
 	EndGlobalSection
 EndGlobal

@@ -24,6 +24,8 @@ namespace Material.Dominio.Cadastros.Entidades
         public void AlterarPreco(double preco)
         {
             //TODO: Implementar AssertionConcern e DomainNotifications para criar validações e notificações de dominio quando uma regra de negócio for infringida.
+            if (preco <= 0)
+                throw new InvalidOperationException("Preço deve ser maior que zero");
             Preco = preco;
         }
     }
