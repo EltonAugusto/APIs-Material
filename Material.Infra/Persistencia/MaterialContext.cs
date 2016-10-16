@@ -1,13 +1,6 @@
 ﻿using Material.Dominio.Cadastros.Entidades;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Data.Entity.ModelConfiguration;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Material.Infra.Comuns.Utilitarios;
 
 namespace Material.Infra.Persistencia
 {
@@ -16,10 +9,13 @@ namespace Material.Infra.Persistencia
         public MaterialContext()
             :base("materialConnectionsString")
         {
+            Database.SetInitializer(new Initializer());
+        
         }
 
         public DbSet<Produto> Produtos { get; set; }
 
+        
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
