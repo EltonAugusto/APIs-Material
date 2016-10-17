@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Configuration;
 using System.Net;
 using System.Net.Http;
+using System.Web.Configuration;
 using System.Web.Http;
 using System.Web.Http.Controllers;
+using WebApi.OutputCache.V2;
 
 namespace Material.Produtos.API.Filters
 {
@@ -11,12 +14,13 @@ namespace Material.Produtos.API.Filters
         public override void OnAuthorization(HttpActionContext actionContext)
         {
             var token = actionContext.Request.Headers.GetValues("Authorization");
+            var url = UriOauth();
             using (HttpClient httpClient = new HttpClient())
             {
                 httpClient.DefaultRequestHeaders.Add("Authorization", token);
                 try
                 {
-                    var response = httpClient.GetStringAsync("http://localhost:49399//api/v1/validatetoken").Result;
+                    var response = httpClient.GetStringAsync(url).Result;
                 }
                 catch (Exception ex)
                 {
@@ -26,6 +30,12 @@ namespace Material.Produtos.API.Filters
                 }
 
             }
+        }
+
+        [CacheOutput(ClientTimeSpan = 200)]
+        public static string UriOauth()
+        {
+            return WebConfigurationManager.AppSettings["urloauth"].ToString();
         }
     }
 }
