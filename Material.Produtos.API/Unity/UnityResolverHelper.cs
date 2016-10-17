@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Web.Http.Dependencies;
 
-namespace Material.Autenticacao.API.Unity
+namespace Material.Produtos.API.Unity
 {
     public class UnityResolverHelper : IDependencyResolver
     {

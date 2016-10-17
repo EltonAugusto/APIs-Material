@@ -1,11 +1,6 @@
 ﻿using Material.Dominio.Cadastros.Servicos;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Material.Dominio.Cadastros.Entidades;
-using Material.Infra.Repositorios.Cadastros;
 using Material.Dominio.Cadastros.Repositorios;
 
 namespace Material.Servico.Services.Cadastros

@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Material.Autenticacao.API", "Material.Autenticacao.API\Material.Autenticacao.API.csproj", "{1344CE6C-285B-4553-933E-3984C299813E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Material.Dominio", "Material.Dominio\Material.Dominio.csproj", "{377F68DD-E270-49DC-8F5B-18380A130E0A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Material.Servico", "Material.Servico\Material.Servico.csproj", "{A4B31F29-DC55-406C-9BD1-5A9F5DCD448D}"
@@ -25,16 +23,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Material.IoC", "Material.Io
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Material.Dominio.Testes", "Material.Dominio.Testes\Material.Dominio.Testes.csproj", "{990496BD-E5C2-4FCF-85D5-CE5BC697BC00}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Material.Produtos.API", "Material.Produtos.API\Material.Produtos.API.csproj", "{AF7BF6F8-1AAA-4CBE-ADA1-8B9695E6F692}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Material.Autenticacao.API", "Material.Autenticacao.API\Material.Autenticacao.API.csproj", "{1344CE6C-285B-4553-933E-3984C299813E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1344CE6C-285B-4553-933E-3984C299813E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1344CE6C-285B-4553-933E-3984C299813E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1344CE6C-285B-4553-933E-3984C299813E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1344CE6C-285B-4553-933E-3984C299813E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{377F68DD-E270-49DC-8F5B-18380A130E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{377F68DD-E270-49DC-8F5B-18380A130E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{377F68DD-E270-49DC-8F5B-18380A130E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -55,16 +53,25 @@ Global
 		{990496BD-E5C2-4FCF-85D5-CE5BC697BC00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{990496BD-E5C2-4FCF-85D5-CE5BC697BC00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{990496BD-E5C2-4FCF-85D5-CE5BC697BC00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF7BF6F8-1AAA-4CBE-ADA1-8B9695E6F692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF7BF6F8-1AAA-4CBE-ADA1-8B9695E6F692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF7BF6F8-1AAA-4CBE-ADA1-8B9695E6F692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF7BF6F8-1AAA-4CBE-ADA1-8B9695E6F692}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1344CE6C-285B-4553-933E-3984C299813E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1344CE6C-285B-4553-933E-3984C299813E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1344CE6C-285B-4553-933E-3984C299813E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1344CE6C-285B-4553-933E-3984C299813E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{1344CE6C-285B-4553-933E-3984C299813E} = {EE0EDB15-DB92-4CA6-AEF2-6091CC7E407B}
 		{377F68DD-E270-49DC-8F5B-18380A130E0A} = {67F33337-86AE-4EDC-9E70-DCF4A34C3BD4}
 		{A4B31F29-DC55-406C-9BD1-5A9F5DCD448D} = {DC2C0131-B3DF-44F6-BB44-121A17BD3964}
 		{67701910-B432-4097-8BE6-387D18B293FD} = {853388EF-89F3-49DE-B5E8-401441D36215}
 		{47CAA0E5-0501-4CB8-B9CD-990A422C6BE0} = {853388EF-89F3-49DE-B5E8-401441D36215}
 		{990496BD-E5C2-4FCF-85D5-CE5BC697BC00} = {F5DAE48A-C534-4C33-A3DD-C086226FA89E}
+		{AF7BF6F8-1AAA-4CBE-ADA1-8B9695E6F692} = {EE0EDB15-DB92-4CA6-AEF2-6091CC7E407B}
+		{1344CE6C-285B-4553-933E-3984C299813E} = {EE0EDB15-DB92-4CA6-AEF2-6091CC7E407B}
 	EndGlobalSection
 EndGlobal

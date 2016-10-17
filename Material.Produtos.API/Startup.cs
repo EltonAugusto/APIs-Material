@@ -1,21 +1,22 @@
-﻿using Microsoft.Owin;
+﻿using Material.IoC;
+using Material.Produtos.API.Unity;
 using Microsoft.Owin.Cors;
-using Microsoft.Owin.Security.OAuth;
+using Microsoft.Practices.Unity;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Owin;
-using System;
 using System.Web.Http;
 
-namespace Material.Autenticacao.API
+namespace Material.Produtos.API
 {
     public class Startup
     {
         public void Configuration(IAppBuilder builder)
         {
             var config = new HttpConfiguration();
+            var container = new UnityContainer();
 
-            ConfigureOAuth(builder);
+            ConfigureDependencyInjection(config, container);
 
             ConfigureWebApi(config);
 
@@ -44,18 +45,11 @@ namespace Material.Autenticacao.API
                 );
         }
 
-        public void ConfigureOAuth(IAppBuilder builder)
-        {
-            var OAuthServerOptions = new OAuthAuthorizationServerOptions
-            {
-                AllowInsecureHttp = true,
-                TokenEndpointPath = new PathString("/api/GenerateToken"),
-                AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(1),
-                Provider = new CustomProvider()
-            };
 
-            builder.UseOAuthAuthorizationServer(OAuthServerOptions);
-            builder.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
+        public static void ConfigureDependencyInjection(HttpConfiguration config, UnityContainer container)
+        {
+            DependencyRegister.Register(container);
+            config.DependencyResolver = new UnityResolverHelper(container);
         }
 
     }
