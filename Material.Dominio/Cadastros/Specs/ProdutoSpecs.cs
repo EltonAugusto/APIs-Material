@@ -10,6 +10,8 @@ namespace Material.Dominio.Cadastros.Specs
         {
             return x => x.Id == id;
         }
+
+
       
     }
 }
