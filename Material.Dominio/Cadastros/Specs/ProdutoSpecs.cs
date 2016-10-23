@@ -6,9 +6,9 @@ namespace Material.Dominio.Cadastros.Specs
 {
     public static class ProdutoSpecs
     {
-        public static Expression<Func<Produto, bool>> ObterPorId(Guid id)
+        public static Expression<Func<Produto, bool>> ObterPorId(string id)
         {
-            return x => x.Id == id;
+            return x => x.Id.ToString() == id;
         }
 
 

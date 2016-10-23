@@ -52,7 +52,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Cadastros\Entidades\ProdutoTestes.cs" />
     <Compile Include="Cadastros\Specs\ProdutoSpecsTestes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -61,6 +60,9 @@
       <Project>{377f68dd-e270-49dc-8f5b-18380a130e0a}</Project>
       <Name>Material.Dominio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Cadastros\Entidades\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

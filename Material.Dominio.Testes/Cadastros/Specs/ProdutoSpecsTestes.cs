@@ -14,9 +14,9 @@ namespace Material.Dominio.Testes.Cadastros.Specs
         public ProdutoSpecsTestes()
         {
             _produtos = new List<Produto>();
-            _produtos.Add(new Produto("Mouse Microsoft Basic", "Mouse Microsoft Basic preto sem fio"));
-            _produtos.Add(new Produto("Notebook Dell 5000 SERIES", "Notebook Dell 5000 SERIES i7 16gb de RAM"));
-            _produtos.Add(new Produto("Mouse Microsoft Basic", "Mouse Microsoft Basic preto sem fio"));
+            _produtos.Add(new Produto("Mouse Microsoft Basic", "Mouse Microsoft Basic preto sem fio",10));
+            _produtos.Add(new Produto("Notebook Dell 5000 SERIES", "Notebook Dell 5000 SERIES i7 16gb de RAM",33));
+            _produtos.Add(new Produto("Mouse Microsoft Basic", "Mouse Microsoft Basic preto sem fio",22));
         }
 
         [TestMethod]
@@ -25,7 +25,7 @@ namespace Material.Dominio.Testes.Cadastros.Specs
         {
             var principal = _produtos.FirstOrDefault();
 
-            var resultado = _produtos.AsQueryable().Where(ProdutoSpecs.ObterPorId(principal.Id)).ToList();
+            var resultado = _produtos.AsQueryable().Where(ProdutoSpecs.ObterPorId(principal.Id.ToString())).ToList();
 
             Assert.AreEqual(resultado.Count(), 1);
 

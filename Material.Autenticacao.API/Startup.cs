@@ -50,7 +50,7 @@ namespace Material.Autenticacao.API
             {
                 AllowInsecureHttp = true,
                 TokenEndpointPath = new PathString("/api/GenerateToken"),
-                AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(1),
+                AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(99991),
                 Provider = new CustomProvider()
             };
 
